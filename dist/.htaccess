@@ -1,0 +1,10 @@
+Options -MultiViews
+
+RewriteEngine On
+
+RewriteRule ^detail$ /detail/ [R=301,L]
+RewriteRule ^detail/thanks$ /detail/thanks/ [R=301,L]
+RewriteRule ^detail/privacy$ /detail/privacy/ [R=301,L]
+RewriteRule ^detail/consent$ /detail/consent/ [R=301,L]
+
+DirectoryIndex index.html
