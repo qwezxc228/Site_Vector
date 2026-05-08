@@ -604,6 +604,7 @@ const allServices = [
 ];
 
 function App() {
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
   const [currentLocationIndex, setCurrentLocationIndex] = useState(0);
   const [currentCategory, setCurrentCategory] = useState(0);
   const [activeFilter, setActiveFilter] = useState("express");
@@ -768,13 +769,28 @@ function App() {
   </select>
 </div>
 
-{/* Номер телефона - динамический */}
-<a 
-  href={`tel:${locationsData[currentLocationIndex]?.phone?.replace(/\D/g, '') || ''}`}
-  className="text-white hover:text-amber-300 font-medium text-lg whitespace-nowrap"
->
-  {locationsData[currentLocationIndex]?.phone || '+7 (985) 018-78-78'}
-</a>
+{/* Правая часть шапки */}
+<div className="flex items-center justify-between w-full max-w-[420px] ml-auto">
+  {/* Номер телефона (слева) */}
+  <a 
+    href={`tel:${locationsData[currentLocationIndex]?.phone?.replace(/\D/g, '') || ''}`}
+    className="text-white hover:text-amber-300 font-medium text-base sm:text-lg whitespace-nowrap"
+  >
+    {locationsData[currentLocationIndex]?.phone || '+7 (985) 018-78-78'}
+  </a>
+
+  {/* Кнопка Скачать (прижата к правому краю) */}
+  <a 
+    href="/downloads/vector-pro.apk" 
+    download="Vector-Pro.apk"
+    className="flex items-center gap-1.5 rounded-xl bg-green-600 hover:bg-green-700 px-5 py-2.5 text-sm font-bold text-white transition-all active:scale-95 whitespace-nowrap"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v-4m0 0l4 4m-4-4l4-4m12 0v4m0 0l-4-4m4 4l-4 4" />
+    </svg>
+    Скачать
+  </a>
+</div>
 
   </div>
 </div>
