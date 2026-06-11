@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 import DetailLanding from './DetailLanding.jsx';
-
+import { Capacitor } from '@capacitor/core';
+import React, { useState, useRef, useEffect } from 'react';
 const locationsData = [
   { id: 0, name: "Жуков проезд 15Ас2", lat: 55.72344, lng: 37.63880, phone: "+7 (985) 018-78-78" },
   { id: 1, name: "Жуков проезд 19", lat: 55.72282, lng: 37.64152, phone: "+7 (985) 018-78-78" },
@@ -604,13 +604,873 @@ const allServices = [
 ];
 
 function App() {
+  const [showGame, setShowGame] = useState(false);
+  const isApp = Capacitor.isNativePlatform(); // true = запущено как приложение
   const [showDownloadModal, setShowDownloadModal] = useState(false);
   const [currentLocationIndex, setCurrentLocationIndex] = useState(0);
   const [currentCategory, setCurrentCategory] = useState(0);
   const [activeFilter, setActiveFilter] = useState("express");
   const [selectedGroup, setSelectedGroup] = useState(null);
   const [selectedMultiple, setSelectedMultiple] = useState([]);
+  const [headerVisible, setHeaderVisible] = useState(true);
+const lastScrollY = useRef(0);
+useEffect(() => {
+  if (!showGame) return;
 
+  const canvas = document.getElementById('gameCanvas');
+  if (!canvas) return;
+  
+  const ctx = canvas.getContext('2d');
+  
+  // Состояние нажатия
+  let isPressingLeft = false;
+  let isPressingRight = false;
+  let targetPosition = 0.5;
+  
+  // Адаптивный размер канваса
+  const resizeCanvas = () => {
+    const container = canvas.parentElement;
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    
+    canvas.width = containerWidth;
+    canvas.height = containerHeight;
+  };
+  
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  
+  let score = 0;
+  let meters = 0;
+  let gameOver = false;
+  let animationId = null;
+  
+  let carPosition = 0.5;
+  let carSmoothPosition = 0.5;
+  let obstacles = [];
+  let speed = 3;
+  let frame = 0;
+  let bestScore = parseInt(localStorage.getItem('carGameBestScore') || '0');
+  
+  // Параметры для анимации
+  let wheelRotation = 0;
+  let exhaustParticles = [];
+  let roadMarkers = [];
+  
+  // Размеры автомобиля относительно canvas
+  const getCarSize = () => {
+    const baseWidth = Math.min(canvas.width * 0.2, 110);
+    const baseHeight = baseWidth * 1.7;
+    return { width: baseWidth, height: baseHeight };
+  };
+  
+  const getCarX = () => {
+    const carSize = getCarSize();
+    const roadLeft = canvas.width * 0.15;
+    const roadRight = canvas.width * 0.85;
+    const playArea = roadRight - roadLeft - carSize.width;
+    return roadLeft + (playArea * carSmoothPosition);
+  };
+
+  // Частицы выхлопа
+  function createExhaustParticle(x, y) {
+    return {
+      x: x + (Math.random() - 0.5) * 10,
+      y: y,
+      size: Math.random() * 4 + 2,
+      life: 1,
+      speed: Math.random() * 2 + 1
+    };
+  }
+
+  // Функция для рисования улучшенного автомобиля
+  function drawCar(x, y) {
+    const carSize = getCarSize();
+    const w = carSize.width;
+    const h = carSize.height;
+    
+    ctx.save();
+    
+    // Тень под автомобилем
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+    ctx.beginPath();
+    ctx.ellipse(x + w / 2, y + h + 5, w * 0.6, 8, 0, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Кузов с градиентом
+    const bodyGradient = ctx.createLinearGradient(x, y, x + w, y);
+    bodyGradient.addColorStop(0, '#1e3a8a');
+    bodyGradient.addColorStop(0.3, '#3b82f6');
+    bodyGradient.addColorStop(0.5, '#60a5fa');
+    bodyGradient.addColorStop(0.7, '#3b82f6');
+    bodyGradient.addColorStop(1, '#1e3a8a');
+    
+    ctx.fillStyle = bodyGradient;
+    ctx.beginPath();
+    ctx.roundRect(x, y + h * 0.15, w, h * 0.75, 8);
+    ctx.fill();
+    
+    // Линия кузова
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+    
+    // Крыша
+    const roofGradient = ctx.createLinearGradient(x, y, x, y + h * 0.3);
+    roofGradient.addColorStop(0, '#1e3a8a');
+    roofGradient.addColorStop(1, '#1e40af');
+    ctx.fillStyle = roofGradient;
+    ctx.beginPath();
+    ctx.roundRect(x + w * 0.2, y + h * 0.05, w * 0.6, h * 0.35, 6);
+    ctx.fill();
+    
+    // Окантовка крыши
+    ctx.strokeStyle = '#60a5fa';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    
+    // Переднее стекло
+    const glassGradient = ctx.createLinearGradient(x, y + h * 0.1, x + w, y + h * 0.1);
+    glassGradient.addColorStop(0, '#1e3a8a');
+    glassGradient.addColorStop(0.5, '#93c5fd');
+    glassGradient.addColorStop(1, '#1e3a8a');
+    ctx.fillStyle = glassGradient;
+    ctx.beginPath();
+    ctx.moveTo(x + w * 0.25, y + h * 0.2);
+    ctx.lineTo(x + w * 0.35, y + h * 0.08);
+    ctx.lineTo(x + w * 0.55, y + h * 0.08);
+    ctx.lineTo(x + w * 0.65, y + h * 0.2);
+    ctx.closePath();
+    ctx.fill();
+    
+    // Заднее стекло
+    ctx.fillStyle = glassGradient;
+    ctx.beginPath();
+    ctx.moveTo(x + w * 0.35, y + h * 0.2);
+    ctx.lineTo(x + w * 0.4, y + h * 0.1);
+    ctx.lineTo(x + w * 0.6, y + h * 0.1);
+    ctx.lineTo(x + w * 0.65, y + h * 0.2);
+    ctx.closePath();
+    ctx.fill();
+    
+    // Двери
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+    ctx.fillRect(x + w * 0.25, y + h * 0.28, w * 0.2, h * 0.55);
+    ctx.fillRect(x + w * 0.55, y + h * 0.28, w * 0.2, h * 0.55);
+    
+    // Ручки дверей
+    ctx.fillStyle = '#94a3b8';
+    ctx.fillRect(x + w * 0.32, y + h * 0.42, w * 0.06, h * 0.04);
+    ctx.fillRect(x + w * 0.62, y + h * 0.42, w * 0.06, h * 0.04);
+    
+    // Колесные арки
+    ctx.fillStyle = '#0f172a';
+    ctx.beginPath();
+    ctx.arc(x + w * 0.2, y + h * 0.2, w * 0.14, 0, Math.PI);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(x + w * 0.8, y + h * 0.2, w * 0.14, 0, Math.PI);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(x + w * 0.2, y + h * 0.85, w * 0.14, Math.PI, 0);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(x + w * 0.8, y + h * 0.85, w * 0.14, Math.PI, 0);
+    ctx.fill();
+    
+    // Колеса с вращением
+    const wheelRadius = w * 0.13;
+    const wheels = [
+      { x: x + w * 0.2, y: y + h * 0.2 },
+      { x: x + w * 0.8, y: y + h * 0.2 },
+      { x: x + w * 0.2, y: y + h * 0.85 },
+      { x: x + w * 0.8, y: y + h * 0.85 }
+    ];
+    
+    wheels.forEach(wheel => {
+      // Шина
+      ctx.fillStyle = '#1e293b';
+      ctx.beginPath();
+      ctx.arc(wheel.x, wheel.y, wheelRadius, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Протектор
+      ctx.strokeStyle = '#334155';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(wheel.x, wheel.y, wheelRadius - 2, 0, Math.PI * 2);
+      ctx.stroke();
+      
+      // Спицы
+      ctx.fillStyle = '#94a3b8';
+      ctx.save();
+      ctx.translate(wheel.x, wheel.y);
+      ctx.rotate(wheelRotation);
+      for (let i = 0; i < 5; i++) {
+        ctx.rotate(Math.PI * 2 / 5);
+        ctx.fillRect(-1, -wheelRadius + 2, 2, wheelRadius * 2 - 4);
+      }
+      ctx.restore();
+      
+      // Центр диска
+      ctx.fillStyle = '#cbd5e1';
+      ctx.beginPath();
+      ctx.arc(wheel.x, wheel.y, wheelRadius * 0.3, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    
+    // Фары с свечением
+    ctx.fillStyle = '#fef08a';
+    ctx.shadowColor = '#fef08a';
+    ctx.shadowBlur = 15;
+    ctx.beginPath();
+    ctx.arc(x + w * 0.12, y + h * 0.18, w * 0.08, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(x + w * 0.88, y + h * 0.18, w * 0.08, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    
+    // Поворотники
+    ctx.fillStyle = '#f97316';
+    ctx.shadowColor = '#f97316';
+    ctx.shadowBlur = 5;
+    ctx.fillRect(x + w * 0.05, y + h * 0.2, w * 0.05, h * 0.04);
+    ctx.fillRect(x + w * 0.9, y + h * 0.2, w * 0.05, h * 0.04);
+    ctx.shadowBlur = 0;
+    
+    // Задние фонари
+    ctx.fillStyle = '#ef4444';
+    ctx.shadowColor = '#ef4444';
+    ctx.shadowBlur = 10;
+    ctx.fillRect(x + w * 0.1, y + h * 0.88, w * 0.12, h * 0.04);
+    ctx.fillRect(x + w * 0.78, y + h * 0.88, w * 0.12, h * 0.04);
+    ctx.shadowBlur = 0;
+    
+    // Решетка радиатора
+    ctx.fillStyle = '#1e293b';
+    ctx.fillRect(x + w * 0.4, y + h * 0.17, w * 0.2, h * 0.06);
+    for (let i = 0; i < 4; i++) {
+      ctx.fillStyle = '#475569';
+      ctx.fillRect(x + w * 0.41 + i * w * 0.05, y + h * 0.175, w * 0.02, h * 0.04);
+    }
+    
+    // Бампер
+    ctx.fillStyle = '#1e293b';
+    ctx.fillRect(x + w * 0.05, y + h * 0.15, w * 0.9, h * 0.06);
+    ctx.fillRect(x + w * 0.05, y + h * 0.85, w * 0.9, h * 0.06);
+    
+    ctx.restore();
+    
+    // Частицы выхлопа
+    exhaustParticles = exhaustParticles.filter(p => p.life > 0);
+    exhaustParticles.forEach(p => {
+      p.y += p.speed;
+      p.life -= 0.03;
+      ctx.fillStyle = `rgba(255, 255, 255, ${p.life * 0.5})`;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    
+    if (frame % 3 === 0) {
+      exhaustParticles.push(createExhaustParticle(x + w * 0.3, y + h + 5));
+      exhaustParticles.push(createExhaustParticle(x + w * 0.7, y + h + 5));
+    }
+  }
+
+  // Функция для рисования улучшенных препятствий
+  function drawObstacle(x, y, type) {
+    const carSize = getCarSize();
+    const obsWidth = carSize.width * 0.8;
+    const obsHeight = carSize.width * 0.8;
+    
+    ctx.save();
+    
+    if (type === 'cone') {
+      // Тень конуса
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+      ctx.beginPath();
+      ctx.ellipse(x + obsWidth / 2, y + 2, obsWidth * 0.4, 5, 0, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Конус с градиентом
+      const coneGradient = ctx.createLinearGradient(x, y, x + obsWidth, y);
+      coneGradient.addColorStop(0, '#ea580c');
+      coneGradient.addColorStop(0.5, '#f97316');
+      coneGradient.addColorStop(1, '#ea580c');
+      
+      ctx.fillStyle = coneGradient;
+      ctx.beginPath();
+      ctx.moveTo(x + obsWidth * 0.3, y - obsHeight);
+      ctx.lineTo(x + obsWidth * 0.1, y);
+      ctx.lineTo(x + obsWidth * 0.9, y);
+      ctx.lineTo(x + obsWidth * 0.7, y - obsHeight);
+      ctx.closePath();
+      ctx.fill();
+      
+      // Полоски на конусе с тенью
+      ctx.fillStyle = '#fff';
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.2)';
+      ctx.shadowBlur = 2;
+      ctx.fillRect(x + obsWidth * 0.18, y - obsHeight * 0.65, obsWidth * 0.64, obsHeight * 0.12);
+      ctx.fillRect(x + obsWidth * 0.2, y - obsHeight * 0.4, obsWidth * 0.6, obsHeight * 0.12);
+      ctx.shadowBlur = 0;
+      
+      // Верхушка конуса
+      ctx.fillStyle = '#fff';
+      ctx.beginPath();
+      ctx.arc(x + obsWidth / 2, y - obsHeight, 4, 0, Math.PI * 2);
+      ctx.fill();
+      
+    } else if (type === 'barrier') {
+      // Тень
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+      ctx.fillRect(x + 2, y - obsHeight + 2, obsWidth, obsHeight);
+      
+      // Барьер
+      for (let i = 0; i < 5; i++) {
+        const gradient = ctx.createLinearGradient(x, 0, x + obsWidth, 0);
+        if (i % 2 === 0) {
+          gradient.addColorStop(0, '#dc2626');
+          gradient.addColorStop(1, '#991b1b');
+        } else {
+          gradient.addColorStop(0, '#f3f4f6');
+          gradient.addColorStop(1, '#d1d5db');
+        }
+        ctx.fillStyle = gradient;
+        ctx.fillRect(x, y - obsHeight + i * obsHeight * 0.2, obsWidth, obsHeight * 0.2);
+      }
+      
+      // Рамка
+      ctx.strokeStyle = '#374151';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(x, y - obsHeight, obsWidth, obsHeight);
+      
+    } else {
+      // Яма
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+      ctx.beginPath();
+      ctx.ellipse(x + obsWidth / 2, y - obsHeight * 0.5, obsWidth * 0.45, obsHeight * 0.35, 0, 0, Math.PI * 2);
+      ctx.fill();
+      
+      const holeGradient = ctx.createRadialGradient(
+        x + obsWidth / 2, y - obsHeight * 0.5, 0,
+        x + obsWidth / 2, y - obsHeight * 0.5, obsWidth * 0.4
+      );
+      holeGradient.addColorStop(0, '#020617');
+      holeGradient.addColorStop(0.7, '#1e293b');
+      holeGradient.addColorStop(1, '#475569');
+      
+      ctx.fillStyle = holeGradient;
+      ctx.beginPath();
+      ctx.ellipse(x + obsWidth / 2, y - obsHeight * 0.5, obsWidth * 0.4, obsHeight * 0.3, 0, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Опасная окантовка
+      ctx.strokeStyle = '#ef4444';
+      ctx.lineWidth = 2;
+      ctx.setLineDash([5, 5]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+    
+    ctx.restore();
+  }
+
+  function spawnObstacle() {
+    const types = ['cone', 'barrier', 'hole'];
+    const type = types[Math.floor(Math.random() * types.length)];
+    const roadLeft = canvas.width * 0.15;
+    const roadRight = canvas.width * 0.85;
+    const x = roadLeft + Math.random() * (roadRight - roadLeft - 60);
+    
+    obstacles.push({ 
+      x, 
+      y: -80, 
+      width: getCarSize().width * 0.9, 
+      height: getCarSize().width * 0.9,
+      type 
+    });
+  }
+
+  function showGameOverScreen() {
+    gameOver = true;
+    
+    if (score > bestScore) {
+      bestScore = score;
+      localStorage.setItem('carGameBestScore', bestScore.toString());
+    }
+    
+    const overlay = document.createElement('div');
+    overlay.id = 'gameOverOverlay';
+    overlay.style.cssText = `
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      animation: fadeIn 0.5s ease;
+      backdrop-filter: blur(8px);
+    `;
+    
+    const isNewRecord = score >= bestScore && score > 0;
+    
+    overlay.innerHTML = `
+      <style>
+        @keyframes slideIn {
+          from { transform: translateY(30px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.05); }
+        }
+        .game-over-btn {
+          transition: all 0.3s ease;
+        }
+        .game-over-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .game-over-btn:active {
+          transform: translateY(0);
+        }
+      </style>
+      <div style="
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        border: 2px solid #fbbf24;
+        border-radius: 24px;
+        padding: 40px;
+        text-align: center;
+        max-width: 90%;
+        width: 380px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        animation: slideIn 0.5s ease;
+      ">
+        <div style="font-size: 64px; margin-bottom: 15px; animation: pulse 2s infinite;">
+          ${isNewRecord ? '🏆' : '💥'}
+        </div>
+        
+        ${isNewRecord ? `
+          <div style="
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          ">
+            НОВЫЙ РЕКОРД!
+          </div>
+        ` : `
+          <h2 style="color: #fbbf24; font-size: 28px; margin: 10px 0; font-weight: bold;">
+            Столкновение!
+          </h2>
+        `}
+        
+        <div style="margin: 25px 0;">
+          <div style="
+            font-size: 56px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 10px 0;
+          ">
+            ${score}
+          </div>
+          <div style="color: #94a3b8; font-size: 18px;">очков</div>
+        </div>
+        
+        <div style="
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 16px;
+          padding: 15px;
+          margin: 20px 0;
+        ">
+          <div style="color: #94a3b8; font-size: 14px; margin-bottom: 8px;">
+            📏 Пройдено: <span style="color: #fff; font-weight: bold;">${meters} м</span>
+          </div>
+          <div style="color: #94a3b8; font-size: 14px;">
+            🏆 Рекорд: <span style="color: #fbbf24; font-weight: bold;">${bestScore} очков</span>
+          </div>
+        </div>
+        
+        <div style="display: flex; gap: 12px; margin-top: 25px;">
+          <button id="retryButton" class="game-over-btn" style="
+            flex: 1;
+            padding: 16px;
+            border: none;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+          ">🔄 Заново</button>
+          <button id="closeGameButton" class="game-over-btn" style="
+            flex: 1;
+            padding: 16px;
+            border: 2px solid #ef4444;
+            border-radius: 16px;
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+          ">✕ Закрыть</button>
+        </div>
+      </div>
+    `;
+    
+    canvas.parentElement.appendChild(overlay);
+    
+    document.getElementById('retryButton').addEventListener('click', () => {
+      overlay.remove();
+      resetGame();
+    });
+    
+    document.getElementById('closeGameButton').addEventListener('click', () => {
+      overlay.remove();
+      setShowGame(false);
+    });
+  }
+
+  function resetGame() {
+    score = 0;
+    meters = 0;
+    gameOver = false;
+    carPosition = 0.5;
+    carSmoothPosition = 0.5;
+    obstacles = [];
+    speed = 3;
+    frame = 0;
+    exhaustParticles = [];
+    isPressingLeft = false;
+    isPressingRight = false;
+    
+    const scoreElement = document.getElementById('score');
+    if (scoreElement) scoreElement.textContent = '0';
+    
+    update();
+  }
+
+  function update() {
+    if (gameOver) return;
+    
+    // Плавное движение автомобиля
+    const moveSpeed = 0.08;
+    if (isPressingLeft) {
+      targetPosition = Math.max(0, carSmoothPosition - moveSpeed);
+    } else if (isPressingRight) {
+      targetPosition = Math.min(1, carSmoothPosition + moveSpeed);
+    } else {
+      targetPosition = carSmoothPosition;
+    }
+    
+    // Плавная интерполяция
+    carSmoothPosition += (targetPosition - carSmoothPosition) * 0.2;
+    
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Небо с звездами
+    const skyGradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+    skyGradient.addColorStop(0, '#0f172a');
+    skyGradient.addColorStop(0.3, '#1e1b4b');
+    skyGradient.addColorStop(0.6, '#312e81');
+    skyGradient.addColorStop(1, '#1e1b4b');
+    ctx.fillStyle = skyGradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    // Луна
+    ctx.fillStyle = '#fef3c7';
+    ctx.shadowColor = '#fef3c7';
+    ctx.shadowBlur = 30;
+    ctx.beginPath();
+    ctx.arc(canvas.width * 0.8, canvas.height * 0.15, 30, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    
+    // Звезды с мерцанием
+    for (let i = 0; i < 40; i++) {
+      const starX = (i * 137 + 50) % canvas.width;
+      const starY = (i * 89 + frame * 0.2) % (canvas.height * 0.5);
+      const starSize = (i % 3 + 1) * 1.5;
+      const alpha = 0.5 + Math.sin(frame * 0.03 + i) * 0.5;
+      
+      ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+      ctx.shadowColor = `rgba(255, 255, 255, ${alpha * 0.5})`;
+      ctx.shadowBlur = starSize * 2;
+      ctx.beginPath();
+      ctx.arc(starX, starY, starSize, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.shadowBlur = 0;
+    
+    // Дорога с текстурой
+    const roadLeft = canvas.width * 0.15;
+    const roadRight = canvas.width * 0.85;
+    const roadWidth = roadRight - roadLeft;
+    
+    // Основа дороги
+    const roadGradient = ctx.createLinearGradient(roadLeft, 0, roadRight, 0);
+    roadGradient.addColorStop(0, '#1f2937');
+    roadGradient.addColorStop(0.3, '#374151');
+    roadGradient.addColorStop(0.5, '#4b5563');
+    roadGradient.addColorStop(0.7, '#374151');
+    roadGradient.addColorStop(1, '#1f2937');
+    
+    ctx.fillStyle = roadGradient;
+    ctx.fillRect(roadLeft, 0, roadWidth, canvas.height);
+    
+    // Текстура асфальта
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+    for (let i = 0; i < 100; i++) {
+      const dotX = roadLeft + Math.random() * roadWidth;
+      const dotY = (i * 73 + frame * speed) % canvas.height;
+      ctx.fillRect(dotX, dotY, 2, 2);
+    }
+    
+    // Края дороги с градиентом
+    const edgeGradient = ctx.createLinearGradient(roadLeft - 10, 0, roadLeft + 10, 0);
+    edgeGradient.addColorStop(0, '#f59e0b');
+    edgeGradient.addColorStop(0.5, '#fbbf24');
+    edgeGradient.addColorStop(1, '#f59e0b');
+    
+    ctx.fillStyle = edgeGradient;
+    ctx.fillRect(roadLeft - 6, 0, 12, canvas.height);
+    ctx.fillRect(roadRight - 6, 0, 12, canvas.height);
+    
+    // Бордюры
+    ctx.fillStyle = '#d1d5db';
+    ctx.fillRect(roadLeft - 10, 0, 4, canvas.height);
+    ctx.fillRect(roadRight + 6, 0, 4, canvas.height);
+    
+    // Газон с градиентом
+    const grassGradient = ctx.createLinearGradient(0, 0, roadLeft - 10, 0);
+    grassGradient.addColorStop(0, '#14532d');
+    grassGradient.addColorStop(1, '#166534');
+    ctx.fillStyle = grassGradient;
+    ctx.fillRect(0, 0, roadLeft - 10, canvas.height);
+    
+    const grassGradient2 = ctx.createLinearGradient(roadRight + 10, 0, canvas.width, 0);
+    grassGradient2.addColorStop(0, '#166534');
+    grassGradient2.addColorStop(1, '#14532d');
+    ctx.fillStyle = grassGradient2;
+    ctx.fillRect(roadRight + 10, 0, canvas.width - roadRight - 10, canvas.height);
+    
+    // Трава на газоне
+    ctx.fillStyle = '#15803d';
+    for (let i = 0; i < 50; i++) {
+      const grassX1 = Math.random() * (roadLeft - 15);
+      const grassX2 = roadRight + 15 + Math.random() * (canvas.width - roadRight - 15);
+      const grassY = (i * 45 + frame * speed * 0.5) % canvas.height;
+      ctx.fillRect(grassX1, grassY, 2, 8);
+      ctx.fillRect(grassX2, grassY, 2, 8);
+    }
+    
+    // Дорожная разметка
+    ctx.setLineDash([40, 30]);
+    ctx.strokeStyle = '#fbbf24';
+    ctx.lineWidth = 3;
+    const middleX = roadLeft + roadWidth / 2;
+    ctx.beginPath();
+    ctx.moveTo(middleX, (frame * speed) % 70);
+    ctx.lineTo(middleX, canvas.height);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    
+    // Автомобиль
+    const carX = getCarX();
+    const carSize = getCarSize();
+    const carY = canvas.height - carSize.height - 50;
+    drawCar(carX, carY);
+    
+    // Обновление препятствий
+    for (let i = obstacles.length - 1; i >= 0; i--) {
+      const obs = obstacles[i];
+      obs.y += speed;
+      
+      drawObstacle(obs.x, obs.y, obs.type);
+      
+      // Улучшенная проверка столкновений
+      const carHitbox = {
+        x: carX + carSize.width * 0.2,
+        y: carY + carSize.height * 0.15,
+        width: carSize.width * 0.6,
+        height: carSize.height * 0.7
+      };
+      
+      const obsHitbox = {
+        x: obs.x + 5,
+        y: obs.y - carSize.width * 0.8 + 5,
+        width: getCarSize().width * 0.8,
+        height: carSize.width * 0.8 - 5
+      };
+      
+      if (
+        carHitbox.x < obsHitbox.x + obsHitbox.width &&
+        carHitbox.x + carHitbox.width > obsHitbox.x &&
+        carHitbox.y < obsHitbox.y + obsHitbox.height &&
+        carHitbox.y + carHitbox.height > obsHitbox.y
+      ) {
+        showGameOverScreen();
+        return;
+      }
+      
+      if (obs.y > canvas.height + 100) {
+        obstacles.splice(i, 1);
+        score += Math.floor(Math.random() * 15) + 5;
+        meters += Math.floor(Math.random() * 20) + 10;
+        
+        const scoreElement = document.getElementById('score');
+        if (scoreElement) {
+          scoreElement.textContent = score;
+        }
+      }
+    }
+    
+    // Увеличение сложности
+    speed = 3 + Math.floor(score / 100) * 0.4;
+    wheelRotation += speed * 0.05;
+    
+    frame++;
+    
+    const spawnRate = Math.max(30, 60 - Math.floor(score / 50));
+    if (frame % spawnRate === 0) {
+      spawnObstacle();
+    }
+    
+    animationId = requestAnimationFrame(update);
+  }
+  
+  // Обработчики касаний для плавного движения
+  const handleTouchStart = (e) => {
+    e.preventDefault();
+    if (gameOver) return;
+    
+    const rect = canvas.getBoundingClientRect();
+    const touchX = e.touches[0].clientX - rect.left;
+    const middle = rect.width / 2;
+    
+    if (touchX < middle) {
+      isPressingLeft = true;
+      isPressingRight = false;
+    } else {
+      isPressingRight = true;
+      isPressingLeft = false;
+    }
+  };
+  
+  const handleTouchMove = (e) => {
+    e.preventDefault();
+    if (gameOver) return;
+    
+    const rect = canvas.getBoundingClientRect();
+    const touchX = e.touches[0].clientX - rect.left;
+    const middle = rect.width / 2;
+    
+    if (touchX < middle) {
+      isPressingLeft = true;
+      isPressingRight = false;
+    } else {
+      isPressingRight = true;
+      isPressingLeft = false;
+    }
+  };
+  
+  const handleTouchEnd = (e) => {
+    e.preventDefault();
+    isPressingLeft = false;
+    isPressingRight = false;
+  };
+  
+  // Обработчики мыши для десктопа
+  const handleMouseDown = (e) => {
+    if (gameOver) return;
+    
+    const rect = canvas.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left;
+    const middle = rect.width / 2;
+    
+    if (mouseX < middle) {
+      isPressingLeft = true;
+      isPressingRight = false;
+    } else {
+      isPressingRight = true;
+      isPressingLeft = false;
+    }
+  };
+  
+  const handleMouseUp = (e) => {
+    isPressingLeft = false;
+    isPressingRight = false;
+  };
+  
+  const handleMouseLeave = (e) => {
+    isPressingLeft = false;
+    isPressingRight = false;
+  };
+  
+  // Клавиатура
+  const handleKeyDown = (e) => {
+    if (gameOver) return;
+    
+    if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') {
+      isPressingLeft = true;
+      isPressingRight = false;
+    }
+    if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') {
+      isPressingRight = true;
+      isPressingLeft = false;
+    }
+  };
+  
+  const handleKeyUp = (e) => {
+    if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') {
+      isPressingLeft = false;
+    }
+    if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') {
+      isPressingRight = false;
+    }
+  };
+  
+  canvas.addEventListener('touchstart', handleTouchStart, { passive: false });
+  canvas.addEventListener('touchmove', handleTouchMove, { passive: false });
+  canvas.addEventListener('touchend', handleTouchEnd);
+  canvas.addEventListener('mousedown', handleMouseDown);
+  canvas.addEventListener('mouseup', handleMouseUp);
+  canvas.addEventListener('mouseleave', handleMouseLeave);
+  window.addEventListener('keydown', handleKeyDown);
+  window.addEventListener('keyup', handleKeyUp);
+  
+  update();
+  
+  return () => {
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+    }
+    window.removeEventListener('resize', resizeCanvas);
+    window.removeEventListener('keydown', handleKeyDown);
+    window.removeEventListener('keyup', handleKeyUp);
+    canvas.removeEventListener('touchstart', handleTouchStart);
+    canvas.removeEventListener('touchmove', handleTouchMove);
+    canvas.removeEventListener('touchend', handleTouchEnd);
+    canvas.removeEventListener('mousedown', handleMouseDown);
+    canvas.removeEventListener('mouseup', handleMouseUp);
+    canvas.removeEventListener('mouseleave', handleMouseLeave);
+    
+    const overlay = document.getElementById('gameOverOverlay');
+    if (overlay) overlay.remove();
+  };
+}, [showGame]);
   const currentPrices = pricesData[currentLocationIndex] || pricesData[0];
   const currentLocation = locationsData[currentLocationIndex] || locationsData[0];
   const currentRouteUrl = `https://yandex.ru/maps/?rtext=~${currentLocation.lat}%2C${currentLocation.lng}&rtt=auto`;
@@ -724,6 +1584,7 @@ function App() {
           style={{ display: 'none' }}
         />
         <DetailLanding />
+        
       </div>
     );
   }
@@ -744,13 +1605,15 @@ function App() {
       <span className="text-3xl font-bold tracking-tighter text-amber-300">VECTOR PRO</span>
     </div>
 
-    {/* Выбор филиала */}
-          <a
-            href="/detail"
-            className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-full border border-amber-300/60 bg-zinc-950/95 px-3 py-2 text-center text-[11px] font-bold leading-none text-amber-300 shadow-[0_8px_20px_rgba(0,0,0,0.14)] transition hover:bg-zinc-900 hover:text-amber-200 sm:px-4 sm:text-sm"
-          >
-            Детейлинг
-          </a>
+    {/* Выбор филиала — скрываем в приложении */}
+{!isApp && (
+  <a
+    href="/detail"
+    className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-full border border-amber-300/60 bg-zinc-950/95 px-3 py-2 text-center text-[11px] font-bold leading-none text-amber-300 shadow-[0_8px_20px_rgba(0,0,0,0.14)] transition hover:bg-zinc-900 hover:text-amber-200 sm:px-4 sm:text-sm"
+  >
+    Детейлинг
+  </a>
+)}
           <div className="flex flex-col gap-1 flex-1 min-w-[220px]">
   <span className="text-zinc-400 text-sm ml-1">Выберите филиал</span>
   <select
@@ -779,17 +1642,18 @@ function App() {
     {locationsData[currentLocationIndex]?.phone || '+7 (985) 018-78-78'}
   </a>
 
-  {/* Кнопка Скачать (прижата к правому краю) */}
-  <a 
-    href="/downloads/vector-pro.apk" 
-    download="Vector-Pro.apk"
+  {/* Кнопка Скачать — только на сайте, скрываем в приложении */}
+{!isApp && (
+  <button
+    onClick={() => setShowDownloadModal(true)}
     className="flex items-center gap-1.5 rounded-xl bg-green-600 hover:bg-green-700 px-5 py-2.5 text-sm font-bold text-white transition-all active:scale-95 whitespace-nowrap"
   >
     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v-4m0 0l4 4m-4-4l4-4m12 0v4m0 0l-4-4m4 4l-4 4" />
     </svg>
     Скачать
-  </a>
+  </button>
+)}
 </div>
 
   </div>
@@ -816,7 +1680,7 @@ function App() {
         </div>
       </header>
       
-  {/* ====================== КАТЕГОРИЯ АВТО (красиво на телефоне) ====================== */}
+{/* ====================== КАТЕГОРИЯ АВТО ====================== */}
 <div className="max-w-7xl mx-auto px-4">
   <p className="text-amber-300 text-sm font-medium mb-4 tracking-widest">КАТЕГОРИЯ АВТО</p>
   
@@ -824,21 +1688,22 @@ function App() {
     {[
       { num: "1", title: "Малый" },
       { num: "2", title: "Средний" },
-      { num: "3", title: "бизнес и кроссоверы" },
+      { num: "3", title: "Бизнес и кроссоверы" },
       { num: "4", title: "Джипы" },
       { num: "5", title: "Микроавтобусы и внедорожники" }
     ].map((cat, index) => (
       <button
         key={cat.num}
         onClick={() => setCurrentCategory(index)}
-        className={`flex flex-col items-center justify-center py-3 md:py-5 rounded-3xl transition-all text-center ${
+        className={`flex flex-col items-center justify-center py-4 md:py-6 rounded-3xl transition-all text-center min-h-[118px] md:min-h-[138px] ${
           currentCategory === index 
             ? 'bg-amber-300 text-black' 
             : 'bg-zinc-900 hover:bg-zinc-800 text-white'
         }`}
       >
-        <span className="text-3xl md:text-4xl font-bold leading-none">{cat.num}</span>
-        <span className="text-[10px] md:text-xs font-medium mt-1 leading-tight px-1">
+        <span className="text-3xl md:text-4xl font-bold leading-none mb-2">{cat.num}</span>
+        
+        <span className="text-[9px] md:text-[11px] font-medium leading-tight px-1.5 break-words hyphens-auto">
           {cat.title}
         </span>
       </button>
@@ -989,9 +1854,7 @@ function App() {
   <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between mb-8">
     <div>
       <h2 className="text-3xl font-bold text-amber-300">Филиал на карте</h2>
-      <p className="text-zinc-400 mt-3 max-w-2xl">
-        На карте всегда показан выбранный филиал. Нажмите на метку или кнопку ниже, чтобы сразу открыть маршрут в Яндекс.Картах.
-      </p>
+      
     </div>
     <a
       href={currentRouteUrl}
@@ -1003,6 +1866,8 @@ function App() {
     </a>
   </div>
 
+  {/* Карта филиала — скрываем в приложении */}
+{!isApp && (
   <div className="w-full h-[500px] rounded-3xl overflow-hidden border border-white/10 bg-zinc-900">
     <iframe
       title={`Карта филиала ${currentLocation.name}`}
@@ -1013,6 +1878,53 @@ function App() {
       allowFullScreen
     />
   </div>
+)}
+{/* ====================== ИГРА ====================== */}
+{showGame && (
+  <div className="fixed inset-0 z-[100] bg-black flex flex-col">
+    {/* Шапка игры */}
+    <div className="flex items-center justify-between bg-zinc-900/95 backdrop-blur px-4 py-4 border-b border-white/10">
+      <div className="flex items-center gap-4">
+        <div className="text-white font-bold text-lg">
+          Очки: <span id="score" className="text-amber-300">0</span>
+        </div>
+        <div className="text-zinc-400 text-sm">
+          🏆 Рекорд: <span id="bestScore" className="text-amber-300">{localStorage.getItem('carGameBestScore') || '0'}</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Игровое поле */}
+    <div className="flex-1 relative" style={{ touchAction: 'none' }}>
+      <canvas 
+        id="gameCanvas" 
+        className="absolute inset-0 w-full h-full"
+      ></canvas>
+      
+      {/* Подсказка */}
+      <div className="absolute bottom-0 left-0 right-0 flex">
+        <div className="flex-1 bg-black/30 backdrop-blur-sm border-t-2 border-white/10 py-3 text-center text-white/70 text-sm">
+          ◀ Нажмите слева
+        </div>
+        <div className="flex-1 bg-black/30 backdrop-blur-sm border-t-2 border-white/10 py-3 text-center text-white/70 text-sm">
+          Нажмите справа ▶
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+{/* Кнопка Играть и выиграть услугу */}
+<div className="max-w-7xl mx-auto px-4 py-12 text-center">
+  <button
+    onClick={() => setShowGame(true)}
+    className="group relative inline-flex items-center gap-3 rounded-3xl bg-gradient-to-r from-amber-400 to-yellow-500 px-10 py-5 text-xl font-bold text-black shadow-xl shadow-amber-500/50 transition-all hover:scale-105 active:scale-95"
+  >
+    🎮 Играть и выиграть услугу бесплатно
+    <span className="text-2xl">→</span>
+  </button>
+  <p className="mt-3 text-sm text-zinc-400">Объезжай препятствия и получи шанс на бесплатную услугу</p>
+</div>
 </section>
       <footer className="bg-black py-12 text-center text-zinc-500 text-sm">
         © 2026 VECTOR PRO

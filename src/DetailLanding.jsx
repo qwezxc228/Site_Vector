@@ -608,7 +608,7 @@ function DetailLanding() {
             onClick={openQuiz}
             className="shrink-0 rounded-lg bg-amber-300 px-3 py-2.5 text-xs font-black text-black transition hover:bg-amber-200 sm:px-4 sm:py-3 sm:text-sm"
           >
-            Записаться
+            Рассчет стоимости
           </button>
         </div>
       </header>
@@ -731,7 +731,7 @@ function DetailLanding() {
                 onClick={openQuiz}
                 className="mt-5 w-full rounded-xl bg-amber-300 px-5 py-3.5 text-sm font-black text-black transition hover:bg-amber-200 sm:mt-6 sm:w-auto sm:rounded-lg sm:px-6 sm:py-4 sm:text-base"
               >
-                Записаться
+                Получить рассчет
               </button>
             </div>
 
