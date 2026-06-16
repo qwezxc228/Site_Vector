@@ -1639,7 +1639,7 @@ useEffect(() => {
     href={`tel:${locationsData[currentLocationIndex]?.phone?.replace(/\D/g, '') || ''}`}
     className="text-white hover:text-amber-300 font-medium text-base sm:text-lg whitespace-nowrap"
   >
-    {locationsData[currentLocationIndex]?.phone || '+7 (985) 018-78-78'}
+    {locationsData[currentLocationIndex]?.phone || '+7 (985) 018-78-buh78'}
   </a>
 
   {/* Кнопка Скачать — только на сайте, скрываем в приложении */}
@@ -1648,10 +1648,7 @@ useEffect(() => {
     onClick={() => setShowDownloadModal(true)}
     className="flex items-center gap-1.5 rounded-xl bg-green-600 hover:bg-green-700 px-5 py-2.5 text-sm font-bold text-white transition-all active:scale-95 whitespace-nowrap"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v-4m0 0l4 4m-4-4l4-4m12 0v4m0 0l-4-4m4 4l-4 4" />
-    </svg>
-    Скачать
+   
   </button>
 )}
 </div>
@@ -1879,52 +1876,8 @@ useEffect(() => {
     />
   </div>
 )}
-{/* ====================== ИГРА ====================== */}
-{showGame && (
-  <div className="fixed inset-0 z-[100] bg-black flex flex-col">
-    {/* Шапка игры */}
-    <div className="flex items-center justify-between bg-zinc-900/95 backdrop-blur px-4 py-4 border-b border-white/10">
-      <div className="flex items-center gap-4">
-        <div className="text-white font-bold text-lg">
-          Очки: <span id="score" className="text-amber-300">0</span>
-        </div>
-        <div className="text-zinc-400 text-sm">
-          🏆 Рекорд: <span id="bestScore" className="text-amber-300">{localStorage.getItem('carGameBestScore') || '0'}</span>
-        </div>
-      </div>
-    </div>
 
-    {/* Игровое поле */}
-    <div className="flex-1 relative" style={{ touchAction: 'none' }}>
-      <canvas 
-        id="gameCanvas" 
-        className="absolute inset-0 w-full h-full"
-      ></canvas>
-      
-      {/* Подсказка */}
-      <div className="absolute bottom-0 left-0 right-0 flex">
-        <div className="flex-1 bg-black/30 backdrop-blur-sm border-t-2 border-white/10 py-3 text-center text-white/70 text-sm">
-          ◀ Нажмите слева
-        </div>
-        <div className="flex-1 bg-black/30 backdrop-blur-sm border-t-2 border-white/10 py-3 text-center text-white/70 text-sm">
-          Нажмите справа ▶
-        </div>
-      </div>
-    </div>
-  </div>
-)}
 
-{/* Кнопка Играть и выиграть услугу */}
-<div className="max-w-7xl mx-auto px-4 py-12 text-center">
-  <button
-    onClick={() => setShowGame(true)}
-    className="group relative inline-flex items-center gap-3 rounded-3xl bg-gradient-to-r from-amber-400 to-yellow-500 px-10 py-5 text-xl font-bold text-black shadow-xl shadow-amber-500/50 transition-all hover:scale-105 active:scale-95"
-  >
-    🎮 Играть и выиграть услугу бесплатно
-    <span className="text-2xl">→</span>
-  </button>
-  <p className="mt-3 text-sm text-zinc-400">Объезжай препятствия и получи шанс на бесплатную услугу</p>
-</div>
 </section>
       <footer className="bg-black py-12 text-center text-zinc-500 text-sm">
         © 2026 VECTOR PRO
