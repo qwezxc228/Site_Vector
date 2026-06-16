@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE yml_catalog SYSTEM "https://partner.market.yandex.ru/pages/help/yml.dtd">
-<yml_catalog date="2026-06-16 10:00">
+<yml_catalog date="2026-06-16T14:37+03:00">
     <shop>
         <name>АВТОМОЙКА, ШИНОМОНТАЖ, ДЕТЕЙЛИНГ</name>
         <company>VECTOR PRO</company>
         <url>https://vectorpro.pro</url>
+        <platform>React / Vite</platform>
         <currencies>
             <currency id="RUR" rate="1"/>
         </currencies>
@@ -23,7 +24,7 @@
         <offers>
             <!-- ========== Мойка Классическая ========== -->
             <offer id="1" available="true">
-                <url>https://ваш-сайт.ру/uslugi/moyka-standart-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>850</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>1</categoryId>
@@ -33,7 +34,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="2" available="true">
-                <url>https://ваш-сайт.ру/uslugi/moyka-standart-2</url>
+                <url>https://vectorpro.pro</url>
                 <price>950</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>1</categoryId>
@@ -43,7 +44,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="3" available="true">
-                <url>https://ваш-сайт.ру/uslugi/moyka-standart-3</url>
+                <url>https://vectorpro.pro</url>
                 <price>1050</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>1</categoryId>
@@ -53,7 +54,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="4" available="true">
-                <url>https://ваш-сайт.ру/uslugi/moyka-standart-4</url>
+                <url>https://vectorpro.pro</url>
                 <price>1150</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>1</categoryId>
@@ -63,7 +64,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="5" available="true">
-                <url>https://ваш-сайт.ру/uslugi/moyka-standart-5</url>
+                <url>https://vectorpro.pro</url>
                 <price>1300</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>1</categoryId>
@@ -75,7 +76,7 @@
 
             <!-- ========== Экспресс мойка ========== -->
             <offer id="6" available="true">
-                <url>https://ваш-сайт.ру/uslugi/express-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>600</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>2</categoryId>
@@ -85,7 +86,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="7" available="true">
-                <url>https://ваш-сайт.ру/uslugi/express-2</url>
+                <url>https://vectorpro.pro</url>
                 <price>700</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>2</categoryId>
@@ -95,7 +96,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="8" available="true">
-                <url>https://ваш-сайт.ру/uslugi/express-3</url>
+                <url>https://vectorpro.pro</url>
                 <price>800</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>2</categoryId>
@@ -105,7 +106,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="9" available="true">
-                <url>https://ваш-сайт.ру/uslugi/express-4</url>
+                <url>https://vectorpro.pro</url>
                 <price>900</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>2</categoryId>
@@ -115,7 +116,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="10" available="true">
-                <url>https://ваш-сайт.ру/uslugi/express-5</url>
+                <url>https://vectorpro.pro</url>
                 <price>1000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>2</categoryId>
@@ -127,7 +128,7 @@
 
             <!-- ========== Комплексы ========== -->
             <offer id="11" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-bazoviy-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>2500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -137,7 +138,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="12" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-bazoviy-2</url>
+                <url>https://vectorpro.pro</url>
                 <price>2700</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -147,7 +148,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="13" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-bazoviy-3</url>
+                <url>https://vectorpro.pro</url>
                 <price>3000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -157,7 +158,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="14" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-bazoviy-4</url>
+                <url>https://vectorpro.pro</url>
                 <price>3300</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -167,7 +168,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="15" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-bazoviy-5</url>
+                <url>https://vectorpro.pro</url>
                 <price>3600</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -177,7 +178,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="16" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-lyuks-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>3600</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -187,7 +188,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="17" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-lyuks-2</url>
+                <url>https://vectorpro.pro</url>
                 <price>4300</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -197,7 +198,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="18" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-lyuks-3</url>
+                <url>https://vectorpro.pro</url>
                 <price>4500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -207,7 +208,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="19" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-lyuks-4</url>
+                <url>https://vectorpro.pro</url>
                 <price>5500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -217,7 +218,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="20" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-lyuks-5</url>
+                <url>https://vectorpro.pro</url>
                 <price>6500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -227,7 +228,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="21" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-premium-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>7300</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -237,7 +238,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="22" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-premium-2</url>
+                <url>https://vectorpro.pro</url>
                 <price>8500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -247,7 +248,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="23" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-premium-3</url>
+                <url>https://vectorpro.pro</url>
                 <price>9500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -257,7 +258,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="24" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-premium-4</url>
+                <url>https://vectorpro.pro</url>
                 <price>11000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -267,7 +268,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="25" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-premium-5</url>
+                <url>https://vectorpro.pro</url>
                 <price>12000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -277,7 +278,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="26" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-zimniy-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>9000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -287,7 +288,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="27" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-zimniy-2</url>
+                <url>https://vectorpro.pro</url>
                 <price>10500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -297,7 +298,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="28" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-zimniy-3</url>
+                <url>https://vectorpro.pro</url>
                 <price>12500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -307,7 +308,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="29" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-zimniy-4</url>
+                <url>https://vectorpro.pro</url>
                 <price>15000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -317,7 +318,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="30" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kompleks-zimniy-5</url>
+                <url>https://vectorpro.pro</url>
                 <price>16500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>3</categoryId>
@@ -329,7 +330,7 @@
 
             <!-- ========== ПОКРЫТИЕ КУЗОВА ========== -->
             <offer id="31" available="true">
-                <url>https://ваш-сайт.ру/uslugi/zhidkiy-polimer-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>1200</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -339,7 +340,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="32" available="true">
-                <url>https://ваш-сайт.ру/uslugi/zhidkiy-polimer-2</url>
+                <url>https://vectorpro.pro</url>
                 <price>1300</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -349,7 +350,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="33" available="true">
-                <url>https://ваш-сайт.ру/uslugi/legkaya-keramika-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>2000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -359,7 +360,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="34" available="true">
-                <url>https://ваш-сайт.ру/uslugi/legkaya-keramika-2</url>
+                <url>https://vectorpro.pro</url>
                 <price>2500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -369,7 +370,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="35" available="true">
-                <url>https://ваш-сайт.ру/uslugi/legkaya-keramika-3</url>
+                <url>https://vectorpro.pro</url>
                 <price>3000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -379,7 +380,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="36" available="true">
-                <url>https://ваш-сайт.ру/uslugi/legkaya-keramika-4</url>
+                <url>https://vectorpro.pro</url>
                 <price>3500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -389,7 +390,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="37" available="true">
-                <url>https://ваш-сайт.ру/uslugi/legkaya-keramika-5</url>
+                <url>https://vectorpro.pro</url>
                 <price>4000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -399,7 +400,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="38" available="true">
-                <url>https://ваш-сайт.ру/uslugi/vosk-koch-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>700</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -409,7 +410,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="39" available="true">
-                <url>https://ваш-сайт.ру/uslugi/vosk-koch-2</url>
+                <url>https://vectorpro.pro</url>
                 <price>800</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -419,7 +420,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="40" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kvartsevoe-pokrytie-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>1400</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -429,7 +430,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="41" available="true">
-                <url>https://ваш-сайт.ру/uslugi/tverdyy-vosk-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>3500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -439,7 +440,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="42" available="true">
-                <url>https://ваш-сайт.ру/uslugi/silikon-uplotniteli-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>350</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -449,7 +450,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="43" available="true">
-                <url>https://ваш-сайт.ру/uslugi/turbo-sushka</url>
+                <url>https://vectorpro.pro</url>
                 <price>500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -459,7 +460,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="44" available="true">
-                <url>https://ваш-сайт.ру/uslugi/antidozhd-lobovoe-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>2000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -469,7 +470,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="45" available="true">
-                <url>https://ваш-сайт.ру/uslugi/antidozhd-poluskera-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>3000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -479,7 +480,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="46" available="true">
-                <url>https://ваш-сайт.ру/uslugi/antidozhd-vse-stekla-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>4500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
@@ -491,7 +492,7 @@
 
             <!-- ========== Салон ========== -->
             <offer id="47" available="true">
-                <url>https://ваш-сайт.ру/uslugi/polirovka-plastika-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>1000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>5</categoryId>
@@ -501,7 +502,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="48" available="true">
-                <url>https://ваш-сайт.ру/uslugi/uborka-tornador-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>1500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>5</categoryId>
@@ -511,7 +512,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="49" available="true">
-                <url>https://ваш-сайт.ру/uslugi/pylesos-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>400</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>5</categoryId>
@@ -521,7 +522,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="50" available="true">
-                <url>https://ваш-сайт.ру/uslugi/moyka-kovrikov</url>
+                <url>https://vectorpro.pro</url>
                 <price>200</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>5</categoryId>
@@ -531,7 +532,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="51" available="true">
-                <url>https://ваш-сайт.ру/uslugi/vlazhnaya-uborka-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>400</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>5</categoryId>
@@ -541,7 +542,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="52" available="true">
-                <url>https://ваш-сайт.ру/uslugi/moyka-kovrika-bagazhnika</url>
+                <url>https://vectorpro.pro</url>
                 <price>300</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>5</categoryId>
@@ -551,7 +552,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="53" available="true">
-                <url>https://ваш-сайт.ру/uslugi/kozhanyy-salon-koch-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>1200</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>5</categoryId>
@@ -561,7 +562,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="54" available="true">
-                <url>https://ваш-сайт.ру/uslugi/sukhoy-tuman</url>
+                <url>https://vectorpro.pro</url>
                 <price>3500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>5</categoryId>
@@ -571,7 +572,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="55" available="true">
-                <url>https://ваш-сайт.ру/uslugi/udalenie-pyaten</url>
+                <url>https://vectorpro.pro</url>
                 <price>500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>5</categoryId>
@@ -581,7 +582,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="56" available="true">
-                <url>https://ваш-сайт.ру/uslugi/uborka-bagazhnika-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>300</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>5</categoryId>
@@ -591,7 +592,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="57" available="true">
-                <url>https://ваш-сайт.ру/uslugi/chistka-stekol-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>5</categoryId>
@@ -603,7 +604,7 @@
 
             <!-- ========== Очистка кузова ========== -->
             <offer id="58" available="true">
-                <url>https://ваш-сайт.ру/uslugi/moyka-dnishcha-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>1500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>6</categoryId>
@@ -613,7 +614,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="59" available="true">
-                <url>https://ваш-сайт.ру/uslugi/obezzhirivanie-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>2500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>6</categoryId>
@@ -623,7 +624,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="60" available="true">
-                <url>https://ваш-сайт.ру/uslugi/udalenie-bituma</url>
+                <url>https://vectorpro.pro</url>
                 <price>500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>6</categoryId>
@@ -633,7 +634,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="61" available="true">
-                <url>https://ваш-сайт.ру/uslugi/udalenie-topolyanogo-kleya</url>
+                <url>https://vectorpro.pro</url>
                 <price>700</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>6</categoryId>
@@ -643,7 +644,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="62" available="true">
-                <url>https://ваш-сайт.ру/uslugi/udalenie-nasekomykh</url>
+                <url>https://vectorpro.pro</url>
                 <price>600</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>6</categoryId>
@@ -653,7 +654,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="63" available="true">
-                <url>https://ваш-сайт.ру/uslugi/glubokaya-ochistka-lkp-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>6000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>6</categoryId>
@@ -665,7 +666,7 @@
 
             <!-- ========== Двигатель ========== -->
             <offer id="64" available="true">
-                <url>https://ваш-сайт.ру/uslugi/moyka-dvigatelya-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>2000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>7</categoryId>
@@ -675,7 +676,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="65" available="true">
-                <url>https://ваш-сайт.ру/uslugi/moyka-dvigatelya-konserv-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>3000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>7</categoryId>
@@ -687,7 +688,7 @@
 
             <!-- ========== Химчистка ========== -->
             <offer id="66" available="true">
-                <url>https://ваш-сайт.ру/uslugi/khimchistka-stoyki</url>
+                <url>https://vectorpro.pro</url>
                 <price>1500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>8</categoryId>
@@ -696,7 +697,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="67" available="true">
-                <url>https://ваш-сайт.ру/uslugi/khimchistka-podlokotnik</url>
+                <url>https://vectorpro.pro</url>
                 <price>1000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>8</categoryId>
@@ -705,7 +706,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="68" available="true">
-                <url>https://ваш-сайт.ру/uslugi/khimchistka-1-sidenie</url>
+                <url>https://vectorpro.pro</url>
                 <price>2500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>8</categoryId>
@@ -715,7 +716,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="69" available="true">
-                <url>https://ваш-сайт.ру/uslugi/khimchistka-1-dver</url>
+                <url>https://vectorpro.pro</url>
                 <price>1500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>8</categoryId>
@@ -725,7 +726,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="70" available="true">
-                <url>https://ваш-сайт.ру/uslugi/khimchistka-pol-1-mesto</url>
+                <url>https://vectorpro.pro</url>
                 <price>1500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>8</categoryId>
@@ -735,7 +736,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="71" available="true">
-                <url>https://ваш-сайт.ру/uslugi/khimchistka-potolok-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>3000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>8</categoryId>
@@ -745,7 +746,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="72" available="true">
-                <url>https://ваш-сайт.ру/uslugi/khimchistka-bagazhnik-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>2000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>8</categoryId>
@@ -755,7 +756,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="73" available="true">
-                <url>https://ваш-сайт.ру/uslugi/khimchistka-ves-salon-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>17000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>8</categoryId>
@@ -765,7 +766,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="74" available="true">
-                <url>https://ваш-сайт.ру/uslugi/khimchistka-rulevoe-koleso</url>
+                <url>https://vectorpro.pro</url>
                 <price>1500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>8</categoryId>
@@ -777,7 +778,7 @@
 
             <!-- ========== Полировка ========== -->
             <offer id="75" available="true">
-                <url>https://ваш-сайт.ру/uslugi/polirovka-1-fara</url>
+                <url>https://vectorpro.pro</url>
                 <price>2500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>9</categoryId>
@@ -787,7 +788,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="76" available="true">
-                <url>https://ваш-сайт.ру/uslugi/polirovka-1-fara-lak</url>
+                <url>https://vectorpro.pro</url>
                 <price>3000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>9</categoryId>
@@ -797,7 +798,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="77" available="true">
-                <url>https://ваш-сайт.ру/uslugi/polirovka-abraziv-1-det</url>
+                <url>https://vectorpro.pro</url>
                 <price>2000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>9</categoryId>
@@ -807,7 +808,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="78" available="true">
-                <url>https://ваш-сайт.ру/uslugi/polirovka-kapot-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>2500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>9</categoryId>
@@ -817,7 +818,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="79" available="true">
-                <url>https://ваш-сайт.ру/uslugi/keramika-kuzova-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>40000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>9</categoryId>
@@ -827,7 +828,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="80" available="true">
-                <url>https://ваш-сайт.ру/uslugi/zhidkoe-steklo-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>15000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>9</categoryId>
@@ -839,7 +840,7 @@
 
             <!-- ========== Колеса ========== -->
             <offer id="81" available="true">
-                <url>https://ваш-сайт.ру/uslugi/khimchistka-kolesnykh-arok</url>
+                <url>https://vectorpro.pro</url>
                 <price>4500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>10</categoryId>
@@ -848,7 +849,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="82" available="true">
-                <url>https://ваш-сайт.ру/uslugi/chernenie-reziny</url>
+                <url>https://vectorpro.pro</url>
                 <price>300</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>10</categoryId>
@@ -858,7 +859,7 @@
                 <vendor>Автомойка</vendor>
             </offer>
             <offer id="83" available="true">
-                <url>https://ваш-сайт.ру/uslugi/khimchistka-diskov-1</url>
+                <url>https://vectorpro.pro</url>
                 <price>2500</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>10</categoryId>
