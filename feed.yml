@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE yml_catalog SYSTEM "https://partner.market.yandex.ru/pages/help/yml.dtd">
+<yml_catalog date="2026-06-16 10:00">
+    <shop>
+        <name>АВТОМОЙКА, ШИНОМОНТАЖ, ДЕТЕЙЛИНГ</name>
+        <company>VECTOR PRO</company>
+        <url>https://vectorpro.pro</url>
+        <currencies>
+            <currency id="RUR" rate="1"/>
+        </currencies>
+        <categories>
+            <category id="1">Мойка Классическая</category>
+            <category id="2">Экспресс мойка (кузов без сушки)</category>
+            <category id="3">Комплексы</category>
+            <category id="4">Дополнительные услуги ПОКРЫТИЕ КУЗОВА</category>
+            <category id="5">Дополнительные услуги Салон</category>
+            <category id="6">Дополнительные услуги Очистка кузова</category>
+            <category id="7">Дополнительные услуги Двигатель</category>
+            <category id="8">Дополнительные услуги Химчистка</category>
+            <category id="9">Дополнительные услуги Полировка</category>
+            <category id="10">Дополнительные Услуги Колеса</category>
+        </categories>
+        <offers>
+            <!-- ========== Мойка Классическая ========== -->
+            <offer id="1" available="true">
+                <url>https://ваш-сайт.ру/uslugi/moyka-standart-1</url>
+                <price>850</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2808945/2a0000019d9571f73eb67fafb20e4ccac85e/orig</picture>
+                <name>Мойка "СТАНДАРТ" (1 категория)</name>
+                <description>Отличный вариант, чтобы быстро и качественно привести внешний вид автомобиля в порядок. (Мойка кузова с шампунем + мойка ковриков) 2-ая фаза +300р</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="2" available="true">
+                <url>https://ваш-сайт.ру/uslugi/moyka-standart-2</url>
+                <price>950</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2808945/2a0000019d9571f73eb67fafb20e4ccac85e/orig</picture>
+                <name>Мойка "СТАНДАРТ" (2 категория)</name>
+                <description>Отличный вариант, чтобы быстро и качественно привести внешний вид автомобиля в порядок. (Мойка кузова с шампунем + мойка ковриков) 2-ая фаза +300р</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="3" available="true">
+                <url>https://ваш-сайт.ру/uslugi/moyka-standart-3</url>
+                <price>1050</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2808945/2a0000019d9571f73eb67fafb20e4ccac85e/orig</picture>
+                <name>Мойка "СТАНДАРТ" (3 категория)</name>
+                <description>Отличный вариант, чтобы быстро и качественно привести внешний вид автомобиля в порядок. (Мойка кузова с шампунем + мойка ковриков) 2-ая фаза +300р</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="4" available="true">
+                <url>https://ваш-сайт.ру/uslugi/moyka-standart-4</url>
+                <price>1150</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2808945/2a0000019d9571f73eb67fafb20e4ccac85e/orig</picture>
+                <name>Мойка "СТАНДАРТ" (4 категория)</name>
+                <description>Отличный вариант, чтобы быстро и качественно привести внешний вид автомобиля в порядок. (Мойка кузова с шампунем + мойка ковриков) 2-ая фаза +300р</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="5" available="true">
+                <url>https://ваш-сайт.ру/uslugi/moyka-standart-5</url>
+                <price>1300</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/12412149/2a0000019d9571df435e9e41ffebfd6a38df/orig</picture>
+                <name>Мойка "СТАНДАРТ" (5 категория)</name>
+                <description>Отличный вариант, чтобы быстро и качественно привести внешний вид автомобиля в порядок. (Мойка кузова с шампунем + мойка ковриков) 2-ая фаза +300р</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+
+            <!-- ========== Экспресс мойка ========== -->
+            <offer id="6" available="true">
+                <url>https://ваш-сайт.ру/uslugi/express-1</url>
+                <price>600</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/17763327/2a0000019d9572197e6d48ecf91f4c3f68ff/orig</picture>
+                <name>Мойка "ЭКСПРЕСС" (1 категория)</name>
+                <description>Быстрая очистка кузова от пыли и лёгких загрязнений. Шампунь для удаления грубых загрязнений используется за дополнительную плату — 100 рублей.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="7" available="true">
+                <url>https://ваш-сайт.ру/uslugi/express-2</url>
+                <price>700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/17763327/2a0000019d9572197e6d48ecf91f4c3f68ff/orig</picture>
+                <name>Мойка "ЭКСПРЕСС" (2 категория)</name>
+                <description>Быстрая очистка кузова от пыли и лёгких загрязнений. Шампунь используется за дополнительную плату — 100 рублей.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="8" available="true">
+                <url>https://ваш-сайт.ру/uslugi/express-3</url>
+                <price>800</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/17763327/2a0000019d9572197e6d48ecf91f4c3f68ff/orig</picture>
+                <name>Мойка "ЭКСПРЕСС" (3 категория)</name>
+                <description>Быстрая очистка кузова от пыли и лёгких загрязнений. Шампунь для удаления грубых загрязнений используется за дополнительную плату — 100 рублей.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="9" available="true">
+                <url>https://ваш-сайт.ру/uslugi/express-4</url>
+                <price>900</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/17763327/2a0000019d9572197e6d48ecf91f4c3f68ff/orig</picture>
+                <name>Мойка "ЭКСПРЕСС" (4 категория)</name>
+                <description>Быстрая очистка кузова от пыли и лёгких загрязнений. Шампунь для удаления грубых загрязнений используется за дополнительную плату — 100 рублей.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="10" available="true">
+                <url>https://ваш-сайт.ру/uslugi/express-5</url>
+                <price>1000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/17763327/2a0000019d9572197e6d48ecf91f4c3f68ff/orig</picture>
+                <name>Мойка "ЭКСПРЕСС" (5 категория)</name>
+                <description>Быстрая очистка кузова от пыли и лёгких загрязнений. Шампунь для удаления грубых загрязнений используется за дополнительную плату — 100 рублей.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+
+            <!-- ========== Комплексы ========== -->
+            <offer id="11" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-bazoviy-1</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/12412149/2a0000019d9571df435e9e41ffebfd6a38df/orig</picture>
+                <name>Комплекс "БАЗОВЫЙ" (1 категория)</name>
+                <description>Комплексная мойка кузова, очистка стекол внутри салона, уборка пылесосом всего салона, мойка ковриков, очистка пластиковых и кожаных поверхностей</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="12" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-bazoviy-2</url>
+                <price>2700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/12412149/2a0000019d9571df435e9e41ffebfd6a38df/orig</picture>
+                <name>Комплекс "БАЗОВЫЙ" (2 категория)</name>
+                <description>Комплексная мойка кузова, очистка стекол внутри салона, уборка пылесосом всего салона, мойка ковриков, очистка пластиковых и кожаных поверхностей</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="13" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-bazoviy-3</url>
+                <price>3000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/12412149/2a0000019d9571df435e9e41ffebfd6a38df/orig</picture>
+                <name>Комплекс "БАЗОВЫЙ" (3 категория)</name>
+                <description>Комплексная мойка кузова, очистка стекол внутри салона, уборка пылесосом всего салона, мойка ковриков, очистка пластиковых и кожаных поверхностей</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="14" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-bazoviy-4</url>
+                <price>3300</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/12412149/2a0000019d9571df435e9e41ffebfd6a38df/orig</picture>
+                <name>Комплекс "БАЗОВЫЙ" (4 категория)</name>
+                <description>Комплексная мойка кузова, очистка стекол внутри салона, уборка пылесосом всего салона, мойка ковриков, очистка пластиковых и кожаных поверхностей</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="15" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-bazoviy-5</url>
+                <price>3600</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/12412149/2a0000019d9571df435e9e41ffebfd6a38df/orig</picture>
+                <name>Комплекс "БАЗОВЫЙ" (5 категория)</name>
+                <description>Комплексная мойка кузова, очистка стекол внутри салона, уборка пылесосом всего салона, мойка ковриков, очистка пластиковых и кожаных поверхностей</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="16" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-lyuks-1</url>
+                <price>3600</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/11939409/2a0000019d9cc5c16403b346886833b44124/orig</picture>
+                <name>Комплекс "ЛЮКС" (1 категория)</name>
+                <description>Трехфазная НАНО мойка: мойка кузова, очистка стекол внутри салона, уборка салона торнадором, пылесос салона, мойка ковриков, очистка пластиковых и кожаных поверхностей, уборка багажника, НАНОвоск, чернение резины</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="17" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-lyuks-2</url>
+                <price>4300</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/11939409/2a0000019d9cc5c16403b346886833b44124/orig</picture>
+                <name>Комплекс "ЛЮКС" (2 категория)</name>
+                <description>Трехфазная НАНО мойка: мойка кузова, очистка стекол внутри салона, уборка салона торнадором, пылесос салона, мойка ковриков, очистка пластиковых и кожаных поверхностей, уборка багажника, НАНОвоск, чернение резины</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="18" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-lyuks-3</url>
+                <price>4500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/11939409/2a0000019d9cc5c16403b346886833b44124/orig</picture>
+                <name>Комплекс "ЛЮКС" (3 категория)</name>
+                <description>Трехфазная НАНО мойка: мойка кузова, очистка стекол внутри салона, уборка салона торнадором, пылесос салона, мойка ковриков, очистка пластиковых и кожаных поверхностей, уборка багажника, НАНОвоск, чернение резины</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="19" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-lyuks-4</url>
+                <price>5500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/11939409/2a0000019d9cc5c16403b346886833b44124/orig</picture>
+                <name>Комплекс "ЛЮКС" (4 категория)</name>
+                <description>Трехфазная НАНО мойка: мойка кузова, очистка стекол внутри салона, уборка салона торнадором, пылесос салона, мойка ковриков, очистка пластиковых и кожаных поверхностей, уборка багажника, НАНОвоск, чернение резины</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="20" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-lyuks-5</url>
+                <price>6500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/11939409/2a0000019d9cc5c16403b346886833b44124/orig</picture>
+                <name>Комплекс "ЛЮКС" (5 категория)</name>
+                <description>Трехфазная НАНО мойка: мойка кузова, очистка стекол внутри салона, уборка салона торнадором, пылесос салона, мойка ковриков, очистка пластиковых и кожаных поверхностей, уборка багажника, НАНОвоск, чернение резины</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="21" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-premium-1</url>
+                <price>7300</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/11939409/2a0000019d9cc5694b2b764559f77ea60490/orig</picture>
+                <name>Комплекс "ПРЕМИУМ-ДЕТЕЙЛИНГ" (1 категория)</name>
+                <description>Трехфазная мойка: мойка кузова, очистка стекол внутри салона, уборка салона торнадором, пылесос салона, мойка ковриков, очистка пластиковых и кожаных поверхностей, уборка багажника, легкая керамика, чернение резины, обезжиривание кузова</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="22" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-premium-2</url>
+                <price>8500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/11939409/2a0000019d9cc5694b2b764559f77ea60490/orig</picture>
+                <name>Комплекс "ПРЕМИУМ-ДЕТЕЙЛИНГ" (2 категория)</name>
+                <description>Трехфазная мойка: мойка кузова, очистка стекол внутри салона, уборка салона торнадором, пылесос салона, мойка ковриков, очистка пластиковых и кожаных поверхностей, уборка багажника, легкая керамика, чернение резины, обезжиривание кузова</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="23" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-premium-3</url>
+                <price>9500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/11939409/2a0000019d9cc5694b2b764559f77ea60490/orig</picture>
+                <name>Комплекс "ПРЕМИУМ-ДЕТЕЙЛИНГ" (3 категория)</name>
+                <description>Трехфазная мойка: мойка кузова, очистка стекол внутри салона, уборка салона торнадором, пылесос салона, мойка ковриков, очистка пластиковых и кожаных поверхностей, уборка багажника, легкая керамика, чернение резины, обезжиривание кузова</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="24" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-premium-4</url>
+                <price>11000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/11939409/2a0000019d9cc5694b2b764559f77ea60490/orig</picture>
+                <name>Комплекс "ПРЕМИУМ-ДЕТЕЙЛИНГ" (4 категория)</name>
+                <description>Трехфазная мойка: мойка кузова, очистка стекол внутри салона, уборка салона торнадором, пылесос салона, мойка ковриков, очистка пластиковых и кожаных поверхностей, уборка багажника, легкая керамика, чернение резины, обезжиривание кузова</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="25" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-premium-5</url>
+                <price>12000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/11939409/2a0000019d9cc5694b2b764559f77ea60490/orig</picture>
+                <name>Комплекс "ПРЕМИУМ-ДЕТЕЙЛИНГ" (5 категория)</name>
+                <description>Трехфазная мойка: мойка кузова, очистка стекол внутри салона, уборка салона торнадором, пылесос салона, мойка ковриков, очистка пластиковых и кожаных поверхностей, уборка багажника, легкая керамика, чернение резины, обезжиривание кузова</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="26" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-zimniy-1</url>
+                <price>9000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/1358381/2a0000019d9cc511d39e0b9a2311ba6b594e/orig</picture>
+                <name>Комплекс "ЗИМНИЙ ПАКЕТ" (1 категория)</name>
+                <description>Трёхфазная мойка + кварц — полная очистка кузова и салона, обработка кожи KOCH, силиконом уплотнителей, мойка днища. Комплексная защита авто снаружи и внутри.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="27" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-zimniy-2</url>
+                <price>10500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/1358381/2a0000019d9cc511d39e0b9a2311ba6b594e/orig</picture>
+                <name>Комплекс "ЗИМНИЙ ПАКЕТ" (2 категория)</name>
+                <description>Трёхфазная мойка + кварц — полная очистка кузова и салона, обработка кожи KOCH, силиконом уплотнителей, мойка днища. Комплексная защита авто снаружи и внутри.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="28" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-zimniy-3</url>
+                <price>12500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/1358381/2a0000019d9cc511d39e0b9a2311ba6b594e/orig</picture>
+                <name>Комплекс "ЗИМНИЙ ПАКЕТ" (3 категория)</name>
+                <description>Трёхфазная мойка + кварц — полная очистка кузова и салона, обработка кожи KOCH, силиконом уплотнителей, мойка днища. Комплексная защита авто снаружи и внутри.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="29" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-zimniy-4</url>
+                <price>15000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/1358381/2a0000019d9cc511d39e0b9a2311ba6b594e/orig</picture>
+                <name>Комплекс "ЗИМНИЙ ПАКЕТ" (4 категория)</name>
+                <description>Трёхфазная мойка + кварц — полная очистка кузова и салона, обработка кожи KOCH, силиконом уплотнителей, мойка днища. Комплексная защита авто снаружи и внутри.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="30" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kompleks-zimniy-5</url>
+                <price>16500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/1358381/2a0000019d9cc511d39e0b9a2311ba6b594e/orig</picture>
+                <name>Комплекс "ЗИМНИЙ ПАКЕТ" (5 категория)</name>
+                <description>Трёхфазная мойка + кварц — полная очистка кузова и салона, обработка кожи KOCH, силиконом уплотнителей, мойка днища. Комплексная защита авто снаружи и внутри.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+
+            <!-- ========== ПОКРЫТИЕ КУЗОВА ========== -->
+            <offer id="31" available="true">
+                <url>https://ваш-сайт.ру/uslugi/zhidkiy-polimer-1</url>
+                <price>1200</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/218134/2a0000019d9cc4c02ad38d447cd1bbc4b4ed/orig</picture>
+                <name>Нанесение "Жидкий Полимер" (1 категория)</name>
+                <description>Создание защитного полимерного слоя на кузове. Обеспечивает стойкий блеск, гидрофобные свойства и защиту от загрязнений на срок до нескольких месяцев.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="32" available="true">
+                <url>https://ваш-сайт.ру/uslugi/zhidkiy-polimer-2</url>
+                <price>1300</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/218134/2a0000019d9cc4c02ad38d447cd1bbc4b4ed/orig</picture>
+                <name>Нанесение "Жидкий Полимер" (2 категория)</name>
+                <description>Создание защитного полимерного слоя на кузове. Обеспечивает стойкий блеск, гидрофобные свойства и защиту от загрязнений на срок до нескольких месяцев.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="33" available="true">
+                <url>https://ваш-сайт.ру/uslugi/legkaya-keramika-1</url>
+                <price>2000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5512660/2a0000019d9cc4e72bc138ecd4c42fca12d6/orig</picture>
+                <name>Легкая керамика (1 категория)</name>
+                <description>Упрощённый вариант керамического покрытия для кузова. Создаёт защитный слой от грязи, воды и ультрафиолета, придаёт блеск.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="34" available="true">
+                <url>https://ваш-сайт.ру/uslugi/legkaya-keramika-2</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5512660/2a0000019d9cc4e72bc138ecd4c42fca12d6/orig</picture>
+                <name>Легкая керамика (2 категория)</name>
+                <description>Упрощённый вариант керамического покрытия для кузова. Создаёт защитный слой от грязи, воды и ультрафиолета, придаёт блеск.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="35" available="true">
+                <url>https://ваш-сайт.ру/uslugi/legkaya-keramika-3</url>
+                <price>3000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5512660/2a0000019d9cc4e72bc138ecd4c42fca12d6/orig</picture>
+                <name>Легкая керамика (3 категория)</name>
+                <description>Упрощённый вариант керамического покрытия для кузова. Создаёт защитный слой от грязи, воды и ультрафиолета, придаёт блеск.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="36" available="true">
+                <url>https://ваш-сайт.ру/uslugi/legkaya-keramika-4</url>
+                <price>3500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5512660/2a0000019d9cc4e72bc138ecd4c42fca12d6/orig</picture>
+                <name>Легкая керамика (4 категория)</name>
+                <description>Упрощённый вариант керамического покрытия для кузова. Создаёт защитный слой от грязи, воды и ультрафиолета, придаёт блеск.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="37" available="true">
+                <url>https://ваш-сайт.ру/uslugi/legkaya-keramika-5</url>
+                <price>4000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5512660/2a0000019d9cc4e72bc138ecd4c42fca12d6/orig</picture>
+                <name>Легкая керамика (5 категория)</name>
+                <description>Упрощённый вариант керамического покрытия для кузова. Создаёт защитный слой от грязи, воды и ультрафиолета, придаёт блеск.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="38" available="true">
+                <url>https://ваш-сайт.ру/uslugi/vosk-koch-1</url>
+                <price>700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/12411943/2a0000019d9cb9109787010f916f87ee7b4a/orig</picture>
+                <name>Обработка воском KOCH NANO MAGIC (1 категория)</name>
+                <description>Надёжная защита автомобиля от загрязнений, химии и реагентов. Сохраняет кузов перед зимой с помощью качественного покрытия длительного действия.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="39" available="true">
+                <url>https://ваш-сайт.ру/uslugi/vosk-koch-2</url>
+                <price>800</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/12411943/2a0000019d9cb9109787010f916f87ee7b4a/orig</picture>
+                <name>Обработка воском KOCH NANO MAGIC (2 категория)</name>
+                <description>Надёжная защита автомобиля от загрязнений, химии и реагентов. Сохраняет кузов перед зимой с помощью качественного покрытия длительного действия.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="40" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kvartsevoe-pokrytie-1</url>
+                <price>1400</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/1521147/2a0000019d95726aaa786c444ad9b1ec0837/orig</picture>
+                <name>Кварцевое Покрытие (1 категория)</name>
+                <description>Нанесение жидкого стекла на кузов. Создаёт сверхпрочный защитный слой от царапин, реагентов и ультрафиолета, обеспечивая стойкий блеск и грязеотталкивание.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="41" available="true">
+                <url>https://ваш-сайт.ру/uslugi/tverdyy-vosk-1</url>
+                <price>3500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/12412149/2a0000019d95760e6abad22b80277f6d2605/orig</picture>
+                <name>Обработка кузова твердым воском (1 категория)</name>
+                <description>Нанесение защитного состава на ЛКП. Заполняет микроцарапины, создает зеркальный блеск, отталкивает грязь и воду, защищает от ультрафиолета и реагентов.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="42" available="true">
+                <url>https://ваш-сайт.ру/uslugi/silikon-uplotniteli-1</url>
+                <price>350</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5512660/2a0000019d95719f9dbb987292e480fdb834/orig</picture>
+                <name>Обработка силиконом "Уплотнители" (1-2 категория)</name>
+                <description>Предотвращение высыхания, растрескивания и примерзания уплотнителей, а также продление их срока службы.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="43" available="true">
+                <url>https://ваш-сайт.ру/uslugi/turbo-sushka</url>
+                <price>500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2757887/2a0000019d95717cf02ac0f0cd2170e14c67/orig</picture>
+                <name>Турбо-сушка автомобиля</name>
+                <description>Продувка автомобиля горячим воздухом для удаления влаги из труднодоступных мест. Предотвращает коррозию, разводы и капли воды после мойки.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="44" available="true">
+                <url>https://ваш-сайт.ру/uslugi/antidozhd-lobovoe-1</url>
+                <price>2000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2773996/2a0000019d957168da6a3dae930a97c8fdbf/orig</picture>
+                <name>Антидождь "Лобовое Стекло" (1-2 категория)</name>
+                <description>Нанесение гидрофобного состава на стекло. Отталкивает воду и грязь, улучшает видимость в дождь и снижает необходимость использования дворников.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="45" available="true">
+                <url>https://ваш-сайт.ру/uslugi/antidozhd-poluskera-1</url>
+                <price>3000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5512660/2a0000019d95714f713e9129dd903d6474ca/orig</picture>
+                <name>Антидождь "Передняя Полусфера" (1-2 категория)</name>
+                <description>Гидрофобное покрытие на лобовое стекло, передние боковые стёкла и зеркала. Обеспечивает чёткий обзор в дождь на всю переднюю зону.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="46" available="true">
+                <url>https://ваш-сайт.ру/uslugi/antidozhd-vse-stekla-1</url>
+                <price>4500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2805495/2a0000019d9571377ca2ccb901046bb3fa5d/orig</picture>
+                <name>Антидождь "Все Стекла" (1-2 категория)</name>
+                <description>Гидрофобное покрытие на все стёкла авто. Отталкивает воду и грязь, улучшает обзор в любую погоду.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+
+            <!-- ========== Салон ========== -->
+            <offer id="47" available="true">
+                <url>https://ваш-сайт.ру/uslugi/polirovka-plastika-1</url>
+                <price>1000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/4322053/2a0000019d957236244c730c9361b74f84ca/orig</picture>
+                <name>Полировка пластика KOCH (1 категория)</name>
+                <description>Восстановление пластиковых поверхностей салона специальными составами KOCH. Удаляет царапины, потёртости и возвращает пластику ровный матовый или глянцевый вид.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="48" available="true">
+                <url>https://ваш-сайт.ру/uslugi/uborka-tornador-1</url>
+                <price>1500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5632604/2a0000019d9cc4a1668e59aafccfec76a5d6/orig</picture>
+                <name>Уборка салона торнадором (1-4 категория)</name>
+                <description>Очистка труднодоступных мест направленной струёй сжатого воздуха с одновременным пылесосом. Удаляет пыль, крошки и мелкий мусор.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="49" available="true">
+                <url>https://ваш-сайт.ру/uslugi/pylesos-1</url>
+                <price>400</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2773996/2a0000019d95724ebcfff5991234945938eb/orig</picture>
+                <name>Уборка салона Пылесосом (1-2 категория)</name>
+                <description>Мощные пылесосы удаляют пыль и грязь из всех уголков салона: сидений, пола, потолка, а также мусор из пепельниц и подстаканников.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="50" available="true">
+                <url>https://ваш-сайт.ру/uslugi/moyka-kovrikov</url>
+                <price>200</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/1643978/2a0000019d9c9b5e7e5d4da6833d057b02ae/orig</picture>
+                <name>Мойка ковриков</name>
+                <description>Мойка автомобильных ковриков с удалением грязи и пыли.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="51" available="true">
+                <url>https://ваш-сайт.ру/uslugi/vlazhnaya-uborka-1</url>
+                <price>400</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2760763/2a0000019d956fdb3204659183498d87caf6/orig</picture>
+                <name>Влажная уборка салона (1-4 категория)</name>
+                <description>Протирка панелей, пластика и всех внутренних поверхностей влажной салфеткой. Удаляет пыль и освежает интерьер без глубокой чистки.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="52" available="true">
+                <url>https://ваш-сайт.ру/uslugi/moyka-kovrika-bagazhnika</url>
+                <price>300</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2808945/2a0000019d956fc84546add101d6de7ce42a/orig</picture>
+                <name>Мойка коврика багажника</name>
+                <description>Мойка коврика багажника с удалением грязи и пыли.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="53" available="true">
+                <url>https://ваш-сайт.ру/uslugi/kozhanyy-salon-koch-1</url>
+                <price>1200</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/12412149/2a0000019d9cc825f07c6cfc61791ae39498/orig</picture>
+                <name>Очистка кожи KOCH CHEMIE LS (1 категория)</name>
+                <description>Профессиональный уход за кожаным салоном. Увлажняет, восстанавливает эластичность кожи, защищает от выцветания и трещин, возвращает матовый блеск и свежий вид.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="54" available="true">
+                <url>https://ваш-сайт.ру/uslugi/sukhoy-tuman</url>
+                <price>3500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2808945/2a0000019d956f8531d06f49975f1499b163/orig</picture>
+                <name>Сухой Туман</name>
+                <description>Мелкодисперсная обработка салона бактерицидным составом. Полная дезинфекция, уничтожение бактерий, плесени и неприятных запахов без намокания поверхностей.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="55" available="true">
+                <url>https://ваш-сайт.ру/uslugi/udalenie-pyaten</url>
+                <price>500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/19253181/2a0000019d956f6f695316b916ebf64bd319/orig</picture>
+                <name>Удаление пятен в салоне</name>
+                <description>Выведение следов от кофе, жира, крови, маркера и других загрязнений. Полностью очищает обивку и ковры, возвращая салону опрятный и свежий вид.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="56" available="true">
+                <url>https://ваш-сайт.ру/uslugi/uborka-bagazhnika-1</url>
+                <price>300</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2781182/2a0000019d956f5e581d8d81e0ecd0bbe568/orig</picture>
+                <name>Уборка багажника пылесосом (1-3 категория)</name>
+                <description>Уборка багажника с помощью пылесоса. Удаление пыли и грязи.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="57" available="true">
+                <url>https://ваш-сайт.ру/uslugi/chistka-stekol-1</url>
+                <price>500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/17763327/2a0000019d956f4bf293e5896fabb58385d3/orig</picture>
+                <name>Чистка стёкол (1-3 категория)</name>
+                <description>Удаление разводов, пыли и налёта со всех стёкол. Обеспечивает идеальную прозрачность и безопасный обзор без грязных следов.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+
+            <!-- ========== Очистка кузова ========== -->
+            <offer id="58" available="true">
+                <url>https://ваш-сайт.ру/uslugi/moyka-dnishcha-1</url>
+                <price>1500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5399152/2a0000019d956c67aa6981ba725b2aa472a2/orig</picture>
+                <name>Мойка днища (1-2 категория)</name>
+                <description>Очистка нижней части кузова от грязи, песка и реагентов. Предотвращает коррозию металла и продлевает срок службы днища.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="59" available="true">
+                <url>https://ваш-сайт.ру/uslugi/obezzhirivanie-1</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2790747/2a0000019d956f361d801ef7d6e3a9f4d2be/orig</picture>
+                <name>Обезжиривание кузова (1 категория)</name>
+                <description>Удаление масляных плёнок, силикона и воска перед покрытием. Обеспечивает идеальное сцепление защитных составов с краской для долговечного результата.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="60" available="true">
+                <url>https://ваш-сайт.ру/uslugi/udalenie-bituma</url>
+                <price>500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/944742/2a0000019d956d9d7bf32dbc2baaa7d707a2/orig</picture>
+                <name>Удаление битума (1 деталь)</name>
+                <description>Удаление чёрных точечных загрязнений от асфальта и смолы с поверхности кузова. Предотвращает въедание частиц в лак и сохраняет чистоту обработанного элемента.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="61" available="true">
+                <url>https://ваш-сайт.ру/uslugi/udalenie-topolyanogo-kleya</url>
+                <price>700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2781182/2a0000019d956d88e88b15d4da6b556ed49d/orig</picture>
+                <name>Удаление Тополинного Клея (1 деталь)</name>
+                <description>Удаление липких прозрачных пятен от почек тополя с поверхности кузова. Предотвращает повреждение лака и восстанавливает гладкость одного элемента авто.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="62" available="true">
+                <url>https://ваш-сайт.ру/uslugi/udalenie-nasekomykh</url>
+                <price>600</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/1521147/2a0000019d956d74bd2cb55b6916564064bc/orig</picture>
+                <name>Удаление Насекомых</name>
+                <description>Удаление белковых остатков с кузова и лобового стекла. Предотвращает въедание частиц в лак и коррозию, сохраняя чистоту и блеск авто.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="63" available="true">
+                <url>https://ваш-сайт.ру/uslugi/glubokaya-ochistka-lkp-1</url>
+                <price>6000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2805495/2a0000019d956d3a4acb854b5417919e1364/orig</picture>
+                <name>Глубокая очистка ЛКП кузова (1 категория)</name>
+                <description>Удаление въевшихся металлических частиц, окалины и промышленной пыли с поверхности краски.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+
+            <!-- ========== Двигатель ========== -->
+            <offer id="64" available="true">
+                <url>https://ваш-сайт.ру/uslugi/moyka-dvigatelya-1</url>
+                <price>2000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>7</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2790747/2a0000019d956d23f698b70106a56a93638b/orig</picture>
+                <name>Мойка двигателя (1 категория)</name>
+                <description>Очистка моторного отсека от грязи, масла и реагентов. Предотвращает коррозию, улучшает теплоотвод и облегчает осмотр узлов.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="65" available="true">
+                <url>https://ваш-сайт.ру/uslugi/moyka-dvigatelya-konserv-1</url>
+                <price>3000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>7</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2790747/2a0000019d956d23f698b70106a56a93638b/orig</picture>
+                <name>Мойка двигателя с консервацией (1 категория)</name>
+                <description>Очистка моторного отсека и нанесение защитного состава. Предотвращает коррозию и сохраняет чистоту под капотом надолго.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+
+            <!-- ========== Химчистка ========== -->
+            <offer id="66" available="true">
+                <url>https://ваш-сайт.ру/uslugi/khimchistka-stoyki</url>
+                <price>1500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <name>Химчистка "Стойки" 1 штука</name>
+                <description>Глубокая очистка обивки и пластика стоек от грязи, пыли и пятен. Цена зависит от количества работ.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="67" available="true">
+                <url>https://ваш-сайт.ру/uslugi/khimchistka-podlokotnik</url>
+                <price>1000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <name>Химчистка "Подлокотник"</name>
+                <description>Глубокая очистка подлокотника от потожировых следов, грязи и бактерий. Цена зависит от количества работ.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="68" available="true">
+                <url>https://ваш-сайт.ру/uslugi/khimchistka-1-sidenie</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5280674/2a0000019d956c3cc8a91edf5fbe6be46180/orig</picture>
+                <name>Химчистка "1 Сиденье"</name>
+                <description>Глубокая очистка обивки одного сиденья от пятен, пота, жира и запахов. Полностью удаляет загрязнения, освежает цвет материала и продлевает срок службы сиденья.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="69" available="true">
+                <url>https://ваш-сайт.ру/uslugi/khimchistka-1-dver</url>
+                <price>1500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5632604/2a0000019d956c29c572120dd97bff1a55cb/orig</picture>
+                <name>Химчистка "1 Дверь"</name>
+                <description>Глубокая очистка обивки и пластика одной двери от грязи, потожировых следов и пятен. Освежает цвет материалов и возвращает двери чистый, ухоженный вид.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="70" available="true">
+                <url>https://ваш-сайт.ру/uslugi/khimchistka-pol-1-mesto</url>
+                <price>1500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/1521147/2a0000019d956c19c4a15718db118021d083/orig</picture>
+                <name>Химчистка "Пол-1 Место"</name>
+                <description>Глубокая очистка коврового покрытия или коврика на одном пассажирском месте. Удаляет грязь, пятна, песок и запахи.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="71" available="true">
+                <url>https://ваш-сайт.ру/uslugi/khimchistka-potolok-1</url>
+                <price>3000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5399152/2a0000019d956c0836e388514093375b1bda/orig</picture>
+                <name>Химчистка "Потолок" (1 категория)</name>
+                <description>Глубокая очистка обивки потолка от пыли, грязевых разводов и пятен. Полностью удаляет загрязнения, освежает цвет ткани.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="72" available="true">
+                <url>https://ваш-сайт.ру/uslugi/khimchistka-bagazhnik-1</url>
+                <price>2000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5373629/2a0000019d956bf4f2e424530ef44f714be2/orig</picture>
+                <name>Химчистка "Багажник" (1 категория)</name>
+                <description>Глубокая очистка обивки и пластика багажника от пыли, грязи, пятен и въевшихся запахов. Полностью удаляет загрязнения, освежает внешний вид.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="73" available="true">
+                <url>https://ваш-сайт.ру/uslugi/khimchistka-ves-salon-1</url>
+                <price>17000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/17763327/2a0000019d956ae0e540aacb496e90b59bf7/orig</picture>
+                <name>Химчистка "Весь салон" (1 категория)</name>
+                <description>Глубокая очистка: обивки сидений, потолка, дверей, ковров, пластика и труднодоступных мест. Удаление пятен, грязи, пыли и запахов.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="74" available="true">
+                <url>https://ваш-сайт.ру/uslugi/khimchistka-rulevoe-koleso</url>
+                <price>1500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2760763/2a0000019d956aabecbd703ffc33fc8a54e0/orig</picture>
+                <name>Химчистка "Рулевое Колесо"</name>
+                <description>Глубокая очистка рулевого колеса от потожировых следов, грязи и бактерий. Удаляет загрязнения, возвращает матовую чистоту поверхности и обеспечивает гигиеничность.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+
+            <!-- ========== Полировка ========== -->
+            <offer id="75" available="true">
+                <url>https://ваш-сайт.ру/uslugi/polirovka-1-fara</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>9</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5373629/2a0000019d956a5b5ef3dfda54dca274a648/orig</picture>
+                <name>Полировка "1 Фара"</name>
+                <description>Обработка одной фары абразивными составами для удаления царапин, помутнений и налёта. Восстанавливает прозрачность, яркость света и улучшает внешний вид фары.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="76" available="true">
+                <url>https://ваш-сайт.ру/uslugi/polirovka-1-fara-lak</url>
+                <price>3000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>9</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5373629/2a0000019d956a5b5ef3dfda54dca274a648/orig</picture>
+                <name>Полировка "1 Фара + Лак"</name>
+                <description>Восстановление прозрачности фары с последующим нанесением защитного лака. Удаляет царапины и помутнения, защищает от выгорания и пожелтения, продлевает яркость света.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="77" available="true">
+                <url>https://ваш-сайт.ру/uslugi/polirovka-abraziv-1-det</url>
+                <price>2000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>9</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/944742/2a0000019d956a919dfd46b760772764d9b8/orig</picture>
+                <name>Полировка "Абразивом 1 Деталь"</name>
+                <description>Обработка одной детали кузова абразивной пастой для удаления царапин, потёртостей и дефектов лака. Восстанавливает гладкость, блеск и ровный цвет.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="78" available="true">
+                <url>https://ваш-сайт.ру/uslugi/polirovka-kapot-1</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>9</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/20340178/2a0000019d956a751194d3af5c25025e9b6b/orig</picture>
+                <name>Полировка "Капот" (1-3 категория)</name>
+                <description>Обработка капота абразивной пастой для удаления царапин, потёртостей и голограмм. Восстанавливает гладкость, глубокий блеск и ровный цвет поверхности капота.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="79" available="true">
+                <url>https://ваш-сайт.ру/uslugi/keramika-kuzova-1</url>
+                <price>40000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>9</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/1358381/2a0000019d956a42b574c2e1aa637263b186/orig</picture>
+                <name>Нанесение "Керамика кузова" (1 категория)</name>
+                <description>Нанесение керамического состава для создания прочного защитного слоя. Обеспечивает защиту от царапин и придаёт блеск.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="80" available="true">
+                <url>https://ваш-сайт.ру/uslugi/zhidkoe-steklo-1</url>
+                <price>15000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>9</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/17712810/2a0000019d956a0d3a4c099bf537fc5d9b8d/orig</picture>
+                <name>Нанесение "Жидкое стекло" (1 категория)</name>
+                <description>Защищает краску от царапин, реагентов и ультрафиолета, обеспечивает стойкий блеск и грязеотталкивание на длительный срок.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+
+            <!-- ========== Колеса ========== -->
+            <offer id="81" available="true">
+                <url>https://ваш-сайт.ру/uslugi/khimchistka-kolesnykh-arok</url>
+                <price>4500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>10</categoryId>
+                <name>Химчистка колесных арок с разбором</name>
+                <description>Комплексное удаление загрязнений, реагентов и старого антикорра (битум, мастика) в труднодоступных полостях. Цена зависит от количества выполняемой работы.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="82" available="true">
+                <url>https://ваш-сайт.ру/uslugi/chernenie-reziny</url>
+                <price>300</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>10</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/5514775/2a0000019d9572862e333276ba044a50c77a/orig</picture>
+                <name>Чернение Резины</name>
+                <description>Процесс обработки поверхности шин специальным средством, которое придаёт им глубокий чёрный цвет и защищает от грязи, пыли и ультрафиолетовых лучей.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+            <offer id="83" available="true">
+                <url>https://ваш-сайт.ру/uslugi/khimchistka-diskov-1</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>10</categoryId>
+                <picture>https://avatars.mds.yandex.net/get-sprav-products/2899371/2a0000019d9cba489151e6d14279d48f7795/orig</picture>
+                <name>Химчистка колесных дисков (1 категория)</name>
+                <description>Химчистка дисков — удаление тормозной пыли и нагара. Очищает диски до блеска и предотвращает коррозию.</description>
+                <vendor>Автомойка</vendor>
+            </offer>
+        </offers>
+    </shop>
+</yml_catalog>
